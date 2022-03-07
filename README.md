@@ -1,1 +1,1 @@
-# js-capstone
+# JS Capstone
