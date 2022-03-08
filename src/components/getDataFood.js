@@ -1,5 +1,5 @@
 import getItemData from './createPopup.js';
-import hidenItems from './hidenItems.js';
+import hiddenItems from './hiddenItems.js';
 import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
 
 // function display an array of objects
@@ -45,7 +45,7 @@ const displayData = (arr) => {
 
     btnRecipeElement.addEventListener('click', () => {
       getItemData(food.idMeal);
-      hidenItems();
+      hiddenItems();
     });
     btnLikedElement.addEventListener('click', () => {
       addLikeToItem(food.idMeal);

@@ -17,9 +17,9 @@ p {
   display: grid;
   grid-auto-flow: row;
   grid-template-areas:
-    '. header .'
-    '. main .'
-    '. footer .';
+    ". header ."
+    ". main ."
+    ". footer .";
   grid-template-columns: 0.3fr 2.4fr 0.3fr;
   grid-template-rows: 0.3fr 2.4fr 0.3fr;
   max-width: 60rem;
@@ -49,9 +49,9 @@ header {
   grid-area: main;
   grid-auto-flow: row;
   grid-template-areas:
-    '. . .'
-    '. . .'
-    '. . .';
+    ". . ."
+    ". . ."
+    ". . .";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   margin: 1rem 0;
@@ -95,9 +95,9 @@ li:hover {
 .card-food {
   display: grid;
   grid-template-areas:
-    'card-img card-img card-img'
-    'card-title card-title card-title'
-    'btn-recipe . btn-liked';
+    "card-img card-img card-img"
+    "card-title card-title card-title"
+    "btn-recipe . btn-liked";
   grid-template-columns: 1fr 1.4fr 0.6fr;
   grid-template-rows: 2fr 0.4fr 0.2fr;
   border: #dbdbdb 1px solid;
@@ -152,7 +152,7 @@ li:hover {
   width: 100%;
 }
 
-.hiden {
+.hidden {
   display: none !important;
 }
 
@@ -208,7 +208,7 @@ li:hover {
   font-size: medium;
 }
 
-.mesgContent input[type='button'] {
+.mesgContent input[type="button"] {
   padding: 5px;
   border: 1px solid #333;
   background-color: #f6e0c0;

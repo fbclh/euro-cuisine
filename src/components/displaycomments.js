@@ -3,7 +3,7 @@ const countComment = (arr, title) => {
   title.innerHTML += counter;
 };
 
-const displayComents = (arr, container) => {
+const displaycomments = (arr, container) => {
   container.innerHTML = '';
   const title = document.createElement('h3');
   title.innerHTML = 'Comments';
@@ -20,7 +20,7 @@ const displayComents = (arr, container) => {
     });
   } else {
     title.innerText += ' (0)';
-    messageData.innerHTML = '<span>Any Comments Yet</span><hr width="250px">';
+    messageData.innerHTML = '<span>No Comments Yet</span><hr width="250px">';
   }
   container.appendChild(messageData);
 };
@@ -34,4 +34,4 @@ const getComments = async (id) => {
   return responseJson;
 };
 
-export { displayComents, getComments, countComment };
+export { displaycomments, getComments, countComment };
