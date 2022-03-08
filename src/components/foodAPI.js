@@ -1,56 +1,72 @@
-// import hidenItems from './hidenItems.js';
-// import { displayComents, getComments } from './displayComents.js';
-// import newMessageForm from './newComent.js';
+// // import getItemData from './createPopup.js';
+// // import hidenItems from './hidenItems.js';
+// // import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
 
-// const mainCont = document.querySelector('.container-food-cards');
+// // function display an array of objects
+// const displayData = (arr) => {
+//   const board = document.querySelector('.container-food-cards');
+//   board.innerHTML = '';
+//   arr.forEach((food) => {
+//     const item = document.createElement('article');
+//     item.id = food.idMeal;
 
-// const closePopup = (elem) => {
-//   mainCont.classList.toggle('no-grid');
-//   hidenItems();
-//   mainCont.removeChild(elem);
+//     item.classList.add('card-food');
+//     item.innerHTML = `
+//         <div class="card-title">
+//           <h5>${food.strMeal}</h5>
+//         </div>        
+//         <button type="button" class="btn-recipe">Recipe</button>
+//         <div>        
+//         </div>
+//         <div class="btn-liked">
+//           Like
+//         </div>
+//         <div class="card-img">
+//          <img src="${food.strMealThumb}" class="img-food">        
+//         </div>     
+//     `;
+
+//     const btnRecipeElement = item.querySelector('.btn-recipe');
+//     const btnLikedElement = item.querySelector('.btn-liked');
+//     const printLike = (data) => {
+//       const likesReturned = data.find(
+//         (element) => element.item_id === food.idMeal
+//       );
+//       btnLikedElement.innerHTML =
+//         likesReturned !== undefined
+//           ? `<i class="fas fa-heart"></i> (${likesReturned.likes})`
+//           : '<i class="far fa-heart"></i> (0)';
+//     };
+//     getLikesToItems()
+//       .then(printLike)
+//       .catch((e) => console.log(e));
+
+//     btnRecipeElement.addEventListener('click', () => {
+//       getItemData(food.idMeal);
+//       hidenItems();
+//     });
+//     btnLikedElement.addEventListener('click', () => {
+//       addLikeToItem(food.idMeal);
+//       getLikesToItems()
+//         .then(printLike)
+//         .catch((e) => console.log(e));
+//     });
+//     board.appendChild(item);
+//   });
 // };
 
-// // function to display popup
-// const createPopup = (details, msgDat) => {
-//   const myPopup = document.createElement('div');
-//   const popupButon = document.createElement('button');
-//   const itemdata = document.createElement('div');
-//   itemdata.classList.add('mesgFormContainer');
-//   const messageContainer = document.createElement('div');
-//   messageContainer.id = 'mesgContainer';
-//   messageContainer.classList.add('mesgFormContainer');
-//   const newMessCont = document.createElement('div');
-//   newMessCont.classList.add('mesgFormContainer');
-//   displayComents(msgDat, messageContainer);
-//   newMessageForm(newMessCont, details.idMeal);
-
-//   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
-//   <p class="recipe">${details.strInstructions}</p>`;
-//   itemdata.id = details.idMeal;
-//   myPopup.id = 'myPopup';
-//   popupButon.innerHTML = 'X';
-//   popupButon.addEventListener('click', () => closePopup(myPopup));
-//   myPopup.classList.add('popuptext');
-//   myPopup.classList.toggle('show');
-//   mainCont.classList.toggle('no-grid');
-//   myPopup.appendChild(popupButon);
-//   myPopup.appendChild(itemdata);
-//   myPopup.appendChild(messageContainer);
-//   myPopup.appendChild(newMessCont);
-//   mainCont.appendChild(myPopup);
+// export const displayCounter = (typeFoodSelected, count) => {
+//   typeFoodSelected.innerHTML = `${typeFoodSelected.textContent} (${count})`;
 // };
 
-// // function to get each element data
-// const getFoodData = async (id) => {
-//   const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
-//   const request = new Request(foodItemDataURL + id);
+// // function to get images and title
+// const getAllData = async (url, typeFoodSelected) => {
+//   const request = new Request(url);
 //   const response = await fetch(request);
 //   const responseJson = await response.json();
-//   const responsInfo = responseJson.meals[0];
-
-//   const messageData = await getComments(id);
-
-//   createPopup(responsInfo, messageData);
+//   const responseInfo = responseJson.meals;
+//   displayCounter(typeFoodSelected, responseInfo.length);
+//   displayData(responseInfo);
 // };
 
-// export { getFoodData as default };
+// export { getAllData as default };

@@ -1,0 +1,74 @@
+/*
+  =====================================
+  Main
+  =====================================
+*/
+
+.main-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. header .'
+    '. main .'
+    '. footer .';
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  max-width: 60rem;
+  height: 100vh;
+  margin: 0 auto;
+  gap: 0.125rem 0.0125rem;
+}
+
+/*
+  =====================================
+  Header
+  =====================================
+*/
+
+.header {
+  /* display: flex; */
+  grid-area: header;
+  /* align-items: flex-end; */
+  /* justify-content: space-between; */
+  border-bottom: 2px #dbdbdb solid;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+  =====================================
+  Section
+  =====================================
+*/
+
+.food-container {
+  display: grid;
+  grid-area: main;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . .'
+    '. . .'
+    '. . .';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 1rem 0;
+  gap: 0.5rem 0.5rem;
+}
+
+/* Card Foods (Dynamic JS) */
+
+/*
+  =====================================
+  Footer
+  =====================================
+*/
+
+.footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  border-top: 2px #dbdbdb solid;
+}
