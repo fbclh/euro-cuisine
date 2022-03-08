@@ -27,7 +27,7 @@ const displayComents = (arr, container) => {
 
 // function to get all messages
 const getComments = async (id) => {
-  const getMessagesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments?item_id=';
+  const getMessagesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments?item_id=';
   const request = new Request(getMessagesLink + id);
   const response = await fetch(request);
   const responseJson = await response.json();

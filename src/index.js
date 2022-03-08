@@ -40,6 +40,7 @@ liSeafoodElement.addEventListener('click', () => {
   liSeafoodElement.classList.add('selected');
   liBeefElement.classList.remove('selected');
   liPastaElement.classList.remove('selected');
+
   typeFoodSelected.textContent = 'Italian';
   liBeefElement.textContent = 'French';
   liPastaElement.textContent = 'Portuguese';
