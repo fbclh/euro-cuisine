@@ -1,12 +1,11 @@
-import hidenItems from './hidenItems.js';
-import { displayComents, getComments } from './displayComents.js';
-import newMessageForm from './newComent.js';
+import hiddenItems from './hiddenItems.js';
+import { displayComents, getComments,newMessageForm } from './comments.js';
 
 const mainCont = document.querySelector('.container-food-cards');
 
 const closePopup = (elem) => {
   mainCont.classList.toggle('no-grid');
-  hidenItems();
+  hiddenItems();
   mainCont.removeChild(elem);
 };
 
