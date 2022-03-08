@@ -1,4 +1,4 @@
-import getItemData from '../../../Marilurita/capstone-javascript/src/modules/createPopup.js';
+import getItemData from './createPopup.js';
 import hidenItems from './hidenItems.js';
 import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
 
