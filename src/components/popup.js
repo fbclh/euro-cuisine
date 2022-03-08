@@ -1,5 +1,5 @@
 import hiddenItems from './hiddenItems.js';
-import { displayComents, getComments,newMessageForm } from './comments.js';
+import { displayComments, getComments,newMessageForm } from './comments.js';
 
 const mainCont = document.querySelector('.container-food-cards');
 
@@ -20,7 +20,7 @@ const createPopup = (details, msgDat) => {
   messageContainer.classList.add('mesgFormContainer');
   const newMessCont = document.createElement('div');
   newMessCont.classList.add('mesgFormContainer');
-  displayComents(msgDat, messageContainer);
+  displayComments(msgDat, messageContainer);
   newMessageForm(newMessCont, details.idMeal);
 
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
