@@ -7,11 +7,12 @@ const [liBeefElement, liPastaElement, liSeafoodElement] =
 let typeFoodSelected = liBeefElement;
 
 // links to get data from food api
-const allBeefURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=French';
+const allBeefURL =
+  'https://www.themealdb.com/api/json/v1/1/filter.php?a=French';
 const allPastaURL = `
-  https://www.themealdb.com/api/json/v1/1/filter.php?c=pasta`;
+  https://www.themealdb.com/api/json/v1/1/filter.php?a=Portuguese`;
 const allSeafoodURL = `
-  https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`;
+  https://www.themealdb.com/api/json/v1/1/filter.php?a=Italian`;
 
 liBeefElement.addEventListener('click', () => {
   typeFoodSelected = liBeefElement;
@@ -48,4 +49,3 @@ liSeafoodElement.addEventListener('click', () => {
 });
 
 getAllData(allBeefURL, typeFoodSelected);
-
