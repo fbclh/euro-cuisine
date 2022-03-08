@@ -2,6 +2,8 @@ h5,
 h4 {
   margin: 0;
   padding: 0;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 h2 {
@@ -17,15 +19,17 @@ p {
   display: grid;
   grid-auto-flow: row;
   grid-template-areas:
-    ". header ."
-    ". main ."
-    ". footer .";
-  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+    '. header .'
+    '. main .'
+    '. footer .';
+  /* grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));   */
+  /* grid-template-columns: 0.3fr 2.4fr 0.3fr; */
   grid-template-rows: 0.3fr 2.4fr 0.3fr;
-  max-width: 60rem;
+  max-width: 80%;
+
   height: 100vh;
   margin: 0 auto;
-  gap: 0.125rem 0.0125rem;
+  gap: 3rem 0.125rem;
 }
 
 header {
@@ -49,35 +53,37 @@ header {
   grid-area: main;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
+    '. . .'
+    '. . .'
+    '. . .';
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   margin: 1rem 0;
-  gap: 0.5rem 0.5rem;
+  gap: 1rem 1rem;
 }
 
-.logo {
+/* .logo {
   display: flex;
   align-items: center;
   margin: 5px;
-}
+} */
 
-.logo * {
+.logo {
   margin: 0;
-  padding: 10px;
+  padding: 0;
 }
 
 .navbar-list {
   display: flex;
-  padding: 0;
+  justify-content: space-between;
   list-style: none;
+  margin-bottom: 0.25rem;
 }
 
 li {
-  margin-left: 5rem;
+  margin-left: 2.5rem;
   cursor: pointer;
+  gap: 1rem;
 }
 
 li:hover {
@@ -95,13 +101,15 @@ li:hover {
 .card-food {
   display: grid;
   grid-template-areas:
-    "card-img card-img card-img"
-    "card-title card-title card-title"
-    "btn-recipe . btn-liked";
+    'card-img card-img card-img'
+    'card-title card-title card-title'
+    'btn-recipe . btn-liked';
   grid-template-columns: 1fr 1.4fr 0.6fr;
   grid-template-rows: 2fr 0.4fr 0.2fr;
   border: #dbdbdb 1px solid;
   gap: 0;
+
+  border-radius: 0.5rem;
 }
 
 .card-img {
@@ -114,6 +122,8 @@ li:hover {
   width: 100%;
   min-height: 250px;
   object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .card-title {
@@ -131,18 +141,21 @@ li:hover {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .btn-liked {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  padding: 0.1rem 0.2rem;
+  padding: 0.1rem 0.125rem;
   border: none;
   background: white;
   color: rgb(221, 21, 21);
   font-size: 0.8em;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 
@@ -208,7 +221,7 @@ li:hover {
   font-size: medium;
 }
 
-.mesgContent input[type="button"] {
+.mesgContent input[type='button'] {
   padding: 5px;
   border: 1px solid #333;
   background-color: #f6e0c0;

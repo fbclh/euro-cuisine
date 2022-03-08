@@ -40,7 +40,6 @@ italianElement.addEventListener('click', () => {
   italianElement.classList.add('selected');
   frenchElement.classList.remove('selected');
   portugueseElement.classList.remove('selected');
-
   categorySelected.textContent = 'Italian';
   frenchElement.textContent = 'French';
   portugueseElement.textContent = 'Portuguese';
