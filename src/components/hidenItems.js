@@ -1,8 +1,8 @@
-const hidenItems = () => {
+const hiddenItems = () => {
   const items = document.querySelectorAll('.card-food');
   items.forEach((e) => {
-    e.classList.toggle('hiden');
+    e.classList.toggle('hidden');
   });
 };
 
-export { hidenItems as default };
+export { hiddenItems as default };
