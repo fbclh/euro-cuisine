@@ -1,8 +1,12 @@
 import './style.css';
 import getAllData from './components/foodApi.js';
 
-const URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
+const frenchElement = document.querySelectorAll('li');
+let typeFoodSelected = liBeefElement;
 
-getAllData(URL, 'French');
+const URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=French';
 
-// getAllData(URL, 'French');
+getAllData(URL, typeFoodSelected);
+
+
+
