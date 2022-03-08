@@ -64,6 +64,7 @@ const getAllData = async (url, typeFoodSelected) => {
   const request = new Request(url);
   const response = await fetch(request);
   const responseJson = await response.json();
+  console.log(responseJson)
   const responseInfo = responseJson.meals;
   displayCounter(typeFoodSelected, responseInfo.length);
   displayData(responseInfo);
