@@ -1,11 +1,12 @@
-import hiddenItems from './hiddenItems.js';
-import { displayComments, getComments,newMessageForm } from './comments.js';
+import hidenItems from './hidenItems.js';
+import { displayComents, getComments } from './displayComents.js';
+import newMessageForm from './newComent.js';
 
 const mainCont = document.querySelector('.container-food-cards');
 
 const closePopup = (elem) => {
   mainCont.classList.toggle('no-grid');
-  hiddenItems();
+  hidenItems();
   mainCont.removeChild(elem);
 };
 
@@ -20,7 +21,7 @@ const createPopup = (details, msgDat) => {
   messageContainer.classList.add('mesgFormContainer');
   const newMessCont = document.createElement('div');
   newMessCont.classList.add('mesgFormContainer');
-  displayComments(msgDat, messageContainer);
+  displayComents(msgDat, messageContainer);
   newMessageForm(newMessCont, details.idMeal);
 
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
