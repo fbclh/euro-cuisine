@@ -14,8 +14,8 @@ body {
 
 h5,
 h4 {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -23,74 +23,74 @@ h2 {
 }
 
 p {
-  margin-left: 20px;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 .container {
-  height: 100vh;
-  max-width: 60rem;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.3fr 2.4fr 0.3fr;
-  grid-template-rows: 0.3fr 2.4fr 0.3fr;
-  gap: 0.125rem 0.0125rem;
   grid-auto-flow: row;
   grid-template-areas:
     '. header .'
     '. main .'
     '. footer .';
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  max-width: 60rem;
+  height: 100vh;
+  margin: 0 auto;
+  gap: 0.125rem 0.0125rem;
 }
 
 header {
-  grid-area: header;
   display: flex;
-  justify-content: space-between;
+  grid-area: header;
   align-items: flex-end;
+  justify-content: space-between;
+  height: 100px;
   border-bottom: 2px #dbdbdb solid;
   color: #333;
-  height: 100px;
   /* background: no-repeat center/100% url('./assets/cookBanner3.jpg'); */
 }
 
 footer {
-  grid-area: footer;
   display: flex;
-  justify-content: flex-start;
+  grid-area: footer;
   align-items: center;
+  justify-content: flex-start;
   border-top: 2px #dbdbdb solid;
 }
 
 main {
-  margin: 1rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0.5rem 0.5rem;
+  grid-area: main;
   grid-auto-flow: row;
   grid-template-areas:
     '. . .'
     '. . .'
     '. . .';
-  grid-area: main;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 1rem 0;
+  gap: 0.5rem 0.5rem;
 }
 
 .logo {
   display: flex;
-  margin: 5px;
   align-items: center;
+  margin: 5px;
 }
 
 .logo * {
-  padding: 10px;
   margin: 0;
+  padding: 10px;
   font-family: 'Brush Script MT', cursive;
 }
 
 .nav-bar-list {
+  display: flex;
   padding: 0;
   list-style: none;
-  display: flex;
 }
 
 li {
@@ -104,28 +104,28 @@ li:hover {
 }
 
 .selected {
-  font-weight: bold;
   border-bottom: 2px solid #333;
+  font-weight: bold;
 }
 
 /* card foods styles */
 
 .card-food {
   display: grid;
-  grid-template-columns: 1fr 1.4fr 0.6fr;
-  grid-template-rows: 2fr 0.4fr 0.2fr;
-  gap: 0;
   grid-template-areas:
     'card-img card-img card-img'
     'card-title card-title card-title'
     'btn-recipe . btn-liked';
+  grid-template-columns: 1fr 1.4fr 0.6fr;
+  grid-template-rows: 2fr 0.4fr 0.2fr;
   border: #dbdbdb 1px solid;
+  gap: 0;
 }
 
 .card-img {
-  overflow: hidden;
   box-sizing: border-box;
   grid-area: card-img;
+  overflow: hidden;
 }
 
 .img-food {
@@ -135,33 +135,33 @@ li:hover {
 }
 
 .card-title {
-  grid-area: card-title;
   display: flex;
-  justify-content: flex-start;
+  grid-area: card-title;
   align-items: flex-start;
+  justify-content: flex-start;
   padding: 0.2rem;
 }
 
 .btn-recipe {
-  background: rgb(221, 21, 21);
+  padding: 0.1rem 0.4rem;
   border: none;
+  background: rgb(221, 21, 21);
   color: white;
   font-weight: bold;
-  padding: 0.1rem 0.4rem;
   cursor: pointer;
 }
 
 .btn-liked {
-  cursor: pointer;
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  background: white;
-  border: none;
-  color: rgb(221, 21, 21);
-  font-weight: bold;
-  font-size: 0.8em;
   padding: 0.1rem 0.2rem;
+  border: none;
+  background: white;
+  color: rgb(221, 21, 21);
+  font-size: 0.8em;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .no-grid {
@@ -179,22 +179,22 @@ li:hover {
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
+  padding: 8px 0;
+  border-radius: 6px;
   background-color: #f6e0c0;
   color: #333;
-  border-radius: 6px;
-  padding: 8px 0;
 }
 
 .popuptext button {
-  cursor: pointer;
   align-self: flex-end;
   margin: 10px 20px;
   padding: 5px;
-  font-weight: bold;
+  border: none;
   background-color: #f6e0c0;
   color: #333;
-  border: none;
   font-size: xx-large;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .show {
@@ -221,16 +221,16 @@ li:hover {
 .mesgContent input,
 .mesgContent textarea {
   margin-bottom: 10px;
-  color: #333;
   border-radius: 6px;
+  color: #333;
   font-size: medium;
 }
 
 .mesgContent input[type='button'] {
-  background-color: #f6e0c0;
-  border: 1px solid #333;
-  font-weight: bold;
   padding: 5px;
+  border: 1px solid #333;
+  background-color: #f6e0c0;
+  font-weight: bold;
 }
 
 textarea:focus,

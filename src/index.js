@@ -19,9 +19,9 @@ liBeefElement.addEventListener('click', () => {
   liBeefElement.classList.add('selected');
   liPastaElement.classList.remove('selected');
   liSeafoodElement.classList.remove('selected');
-  typeFoodSelected.textContent = 'Beef';
-  liPastaElement.textContent = 'Pasta';
-  liSeafoodElement.textContent = 'Seafood';
+  typeFoodSelected.textContent = 'French';
+  liPastaElement.textContent = 'Portuguese';
+  liSeafoodElement.textContent = 'Italian';
   getAllData(allBeefURL, typeFoodSelected);
 });
 
@@ -30,9 +30,9 @@ liPastaElement.addEventListener('click', () => {
   liPastaElement.classList.add('selected');
   liBeefElement.classList.remove('selected');
   liSeafoodElement.classList.remove('selected');
-  typeFoodSelected.textContent = 'Pasta';
-  liBeefElement.textContent = 'Beef';
-  liSeafoodElement.textContent = 'Seafood';
+  typeFoodSelected.textContent = 'Portuguese';
+  liBeefElement.textContent = 'French';
+  liSeafoodElement.textContent = 'Italian';
   getAllData(allPastaURL, typeFoodSelected);
 });
 
@@ -41,9 +41,9 @@ liSeafoodElement.addEventListener('click', () => {
   liSeafoodElement.classList.add('selected');
   liBeefElement.classList.remove('selected');
   liPastaElement.classList.remove('selected');
-  typeFoodSelected.textContent = 'Seafood';
-  liBeefElement.textContent = 'Beef';
-  liPastaElement.textContent = 'Past';
+  typeFoodSelected.textContent = 'Italian';
+  liBeefElement.textContent = 'French';
+  liPastaElement.textContent = 'Portuguese';
   getAllData(allSeafoodURL, typeFoodSelected);
 });
 
