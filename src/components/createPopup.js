@@ -2,7 +2,7 @@ import hidenItems from './hidenItems.js';
 import { displayComents, getComments } from './displayComents.js';
 import newMessageForm from './newComent.js';
 
-const mainCont = document.querySelector('.container-food-cards');
+const mainCont = document.querySelector('.food-container');
 
 const closePopup = (elem) => {
   mainCont.classList.toggle('no-grid');
@@ -42,7 +42,8 @@ const createPopup = (details, msgDat) => {
 
 // function to get each element data
 const getItemData = async (id) => {
-  const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+  const foodItemDataURL =
+    'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
   const request = new Request(foodItemDataURL + id);
   const response = await fetch(request);
   const responseJson = await response.json();

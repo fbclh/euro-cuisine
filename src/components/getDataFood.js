@@ -4,7 +4,7 @@ import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
 
 // function display an array of objects
 const displayData = (arr) => {
-  const board = document.querySelector('.container-food-cards');
+  const board = document.querySelector('.food-container');
   board.innerHTML = '';
   arr.forEach((food) => {
     const item = document.createElement('article');
