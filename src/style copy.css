@@ -1,79 +1,81 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+/*
+  =====================================
+  Main
+  =====================================
+*/
 
-html,
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  /* font-family: 'Quicksand', 'Courier New', Courier, monospace; */
-}
-
-body {
-  background: #fafafa;
-}
-
-h5,
-h4 {
-  padding: 0;
-  margin: 0;
-}
-
-h2 {
-  text-align: center;
-}
-
-p {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.container {
-  height: 100vh;
-  max-width: 60rem;
-  margin: 0 auto;
+.main-container {
   display: grid;
-  grid-template-columns: 0.3fr 2.4fr 0.3fr;
-  grid-template-rows: 0.3fr 2.4fr 0.3fr;
-  gap: 0.125rem 0.0125rem;
   grid-auto-flow: row;
   grid-template-areas:
     '. header .'
     '. main .'
     '. footer .';
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  max-width: 60rem;
+  height: 100vh;
+  margin: 0 auto;
+  gap: 0.125rem 0.0125rem;
 }
 
-header {
+/*
+  =====================================
+  Header
+  =====================================
+*/
+
+.header {
+  /* display: flex; */
   grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  /* justify-content: space-between; */
   border-bottom: 2px #dbdbdb solid;
-  color: #333;
-  height: 100px;
-  /* background: no-repeat center/100% url('./assets/cookBanner3.jpg'); */
 }
 
-footer {
-  grid-area: footer;
+.logo {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-top: 2px #dbdbdb solid;
+  justify-content: center;
 }
 
-main {
-  margin: 1rem 0;
+/*
+  =====================================
+  Section
+  =====================================
+*/
+
+.food-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0.5rem 0.5rem;
+  grid-area: main;
   grid-auto-flow: row;
   grid-template-areas:
     '. . .'
     '. . .'
     '. . .';
-  grid-area: main;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 1rem 0;
+  gap: 0.5rem 0.5rem;
 }
+
+/* Card Foods (Dynamic JS) */
+
+/*
+  =====================================
+  Footer
+  =====================================
+*/
+
+.footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  border-top: 2px #dbdbdb solid;
+}
+
+/*  */
+/*  */
+/*  */
 
 .logo {
   display: flex;
@@ -87,7 +89,7 @@ main {
   font-family: 'Brush Script MT', cursive;
 }
 
-.nav-bar-list {
+.navbar-list {
   padding: 0;
   list-style: none;
   display: flex;
@@ -294,3 +296,4 @@ input:focus {
     height: 100%;
   }
 }
+
