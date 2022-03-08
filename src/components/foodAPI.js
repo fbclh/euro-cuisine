@@ -1,6 +1,6 @@
-// import getItemData from './createPopup.js';
-// import hiddenItems from './hiddenItems.js';
-// import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
+import getItemData from './popup.js';
+import hiddenItems from './hiddenItems.js';
+import { addLikeToItem, getLikesToItems } from './likeApi.js';
 
 // function display an array of objects
 const displayData = (arr) => {
