@@ -1,5 +1,5 @@
 import getItemData from '../../../Marilurita/capstone-javascript/src/modules/createPopup.js';
-import hidenItems from '../../../Marilurita/capstone-javascript/src/modules/hidenItems.js';
+import hidenItems from './hidenItems.js';
 import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
 
 // function display an array of objects
