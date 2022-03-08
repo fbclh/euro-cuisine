@@ -57,17 +57,17 @@ const displayData = (arr) => {
   });
 };
 
-export const displayCounter = (typeFoodSelected, count) => {
-  typeFoodSelected.innerHTML = `${typeFoodSelected.textContent} (${count})`;
+export const displayCounter = (categorySelected, count) => {
+  categorySelected.innerHTML = `${categorySelected.textContent} (${count})`;
 };
 
 // function to get images and title
-const getAllData = async (url, typeFoodSelected) => {
+const getAllData = async (url, categorySelected) => {
   const request = new Request(url);
   const response = await fetch(request);
   const responseJson = await response.json();
   const responseInfo = responseJson.meals;
-  displayCounter(typeFoodSelected, responseInfo.length);
+  displayCounter(categorySelected, responseInfo.length);
   displayData(responseInfo);
 };
 
