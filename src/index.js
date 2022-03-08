@@ -43,7 +43,7 @@ liSeafoodElement.addEventListener('click', () => {
   liPastaElement.classList.remove('selected');
   typeFoodSelected.textContent = 'Seafood';
   liBeefElement.textContent = 'Beef';
-  liPastaElement.textContent = 'Past';
+  liPastaElement.textContent = 'Pasta';
   getAllData(allSeafoodURL, typeFoodSelected);
 });
 

@@ -3,7 +3,7 @@ import { displayComents, getComments } from './displayComents.js';
 // function to post element
 const postNewMessage = async (id, name, text) => {
   const postMessageLink =
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments';
   const request = new Request(postMessageLink);
   const data = {
     method: 'POST',
