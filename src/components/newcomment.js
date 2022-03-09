@@ -19,7 +19,7 @@ const postNewMessage = async (id, name, text) => {
 
   await fetch(request, data);
   const arr = await getComments(id);
-  const container = document.getElementById('mesgContainer'); // /?!
+  const container = document.getElementById('mesgContainer'); // ?!
   displaycomments(arr, container);
 };
 

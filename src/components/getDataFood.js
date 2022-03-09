@@ -1,6 +1,6 @@
 import getItemData from './createPopup.js';
 import hiddenItems from './hiddenItems.js';
-import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
+import { addLikes, getLikes } from './likeDataApi.js';
 
 const displayData = (arr) => {
   const board = document.querySelector('.food-container');
@@ -38,7 +38,7 @@ const displayData = (arr) => {
           ? `<i class="fas fa-heart"></i> (${likesReturned.likes})`
           : '<i class="far fa-heart"></i> (0)';
     };
-    getLikesToItems()
+    getLikes()
       .then(printLike)
       .catch((e) => console.log(e));
 
@@ -47,8 +47,8 @@ const displayData = (arr) => {
       hiddenItems();
     });
     btnLikedElement.addEventListener('click', () => {
-      addLikeToItem(food.idMeal);
-      getLikesToItems()
+      addLikes(food.idMeal);
+      getLikes()
         .then(printLike)
         .catch((e) => console.log(e));
     });
