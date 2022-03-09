@@ -13,10 +13,10 @@ const displayComments = (arr, container) => {
   if (!arr.error) {
     countComments(arr, title);
     arr.forEach((element) => {
-      const messItem = document.createElement('div');
-      messItem.innerHTML = `
+      const messageDiv = document.createElement('div');
+      messageDiv.innerHTML = `
       <span>${element.creation_date} - <strong>${element.username}:</strong> ${element.comment}</span><hr/>`;
-      messageData.appendChild(messItem);
+      messageData.appendChild(messageDiv);
     });
   } else {
     title.innerText += ' (0)';

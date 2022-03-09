@@ -41,17 +41,19 @@ const displayData = (arr) => {
     getLikes()
       .then(printLike)
       .catch((e) => console.log(e));
-
+    
     btnRecipeElement.addEventListener('click', () => {
       getItemData(food.idMeal);
       hideCSS();
     });
+    
     btnLikedElement.addEventListener('click', () => {
       addLikes(food.idMeal);
       getLikes()
         .then(printLike)
         .catch((e) => console.log(e));
     });
+
     board.appendChild(item);
   });
 };
