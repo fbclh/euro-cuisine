@@ -10,7 +10,7 @@ beforeAll(() => {
         <div>
           <a href="/" class="logo-link">
           <h1 class="logo">
-            <span class="logo-span">Euro</span> <span>Cuisine</span>
+
           </h1>
           </a>
         </div>
@@ -43,17 +43,19 @@ describe('Test to verify number of items in French cuisine category.', () => {
 });
 
 describe('Testing the correct counting of comments', () => {
-  test('Title header shows Comments (3)', () => {
-    const container = document.querySelector('.container-food-cards');
+    test('Result must show Comments (5)', () => {
+    const container = document.querySelector('.food-container');
     container.innerHTML = `<h3>Comments</h3>
     <div><span>New comment 1</span></div>
     <div><span>New comment 2</span></div>
-    <div><span>New comment 3</span></div>`;
+    <div><span>New comment 3</span></div>
+    <div><span>New comment 4</span></div>
+    <div><span>New comment 5</span></div>`;
     const title = document.querySelector('h3');
     const array = document.querySelectorAll('span');
 
     countComments(array, title);
 
-    expect(title.innerHTML).toEqual('Comments (3)');
+    expect(title.innerHTML).toEqual('Comments (5)');
   });
 });
