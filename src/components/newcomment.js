@@ -1,6 +1,5 @@
 import { displaycomments, getComments } from './displaycomments.js';
 
-// function to post element
 const postNewMessage = async (id, name, text) => {
   const postMessageLink =
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments';

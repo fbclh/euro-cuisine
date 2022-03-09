@@ -1,15 +1,14 @@
-// link to likes and message store api
 const projectID = 'xkf1WNltgqyGhjhbknyA';
 const likesLink = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${projectID}/likes/`;
 
 export const addLikeToItem = async (itemId) => {
   const request = new Request(likesLink);
   const response = await fetch(request, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
+    method: 'POST', 
+    mode: 'cors', 
     body: JSON.stringify({ item_id: `${itemId}` }),
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+    cache: 'no-cache',
+    credentials: 'same-origin', 
     headers: {
       'Content-Type': 'application/json',
     },

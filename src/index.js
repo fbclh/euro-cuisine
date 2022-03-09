@@ -5,8 +5,6 @@ import getAllData from './components/getDataFood.js';
 const [frenchElement, portugueseElement, italianElement] =
   document.querySelectorAll('li');
 let categorySelected = frenchElement;
-
-// links to get data from food api
 const frenchURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=French';
 const portugueseURL = `
   https://www.themealdb.com/api/json/v1/1/filter.php?a=Portuguese`;

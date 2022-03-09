@@ -2,7 +2,6 @@ import getItemData from './createPopup.js';
 import hiddenItems from './hiddenItems.js';
 import { addLikeToItem, getLikesToItems } from './likeDataApi.js';
 
-// function display an array of objects
 const displayData = (arr) => {
   const board = document.querySelector('.food-container');
   board.innerHTML = '';
@@ -61,7 +60,6 @@ export const displayCounter = (categorySelected, count) => {
   categorySelected.innerHTML = `${categorySelected.textContent} (${count})`;
 };
 
-// function to get images and title
 const getAllData = async (url, categorySelected) => {
   const request = new Request(url);
   const response = await fetch(request);
