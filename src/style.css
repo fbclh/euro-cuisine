@@ -2,6 +2,7 @@
   --red: #de1616;
   --light-red: #fce9e9;
   --black: #191919;
+  --white: #ffffff;
 }
 
 /*
@@ -52,17 +53,17 @@
 }
 
 .logo-span {
-  color: white;
-  background-color: var(--red);
   padding: 0.375rem 0.875rem;
+  background-color: var(--red);
+  color: var(--white);
 }
 
 .navbar-list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.25rem;
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 .selected {
@@ -81,8 +82,8 @@
 }
 
 .list:hover {
-  font-weight: bold;
   color: var(--red);
+  font-weight: bold;
 }
 
 @media (max-width: 665px) {
@@ -147,13 +148,12 @@
     'btn-recipe . btn-liked';
   grid-template-columns: 1fr 1.4fr 0.6fr;
   grid-template-rows: 2fr 0.4fr 0.2fr;
-  border: #dbdbdb 1px solid;
+  border: 1px solid #dbdbdb;
   /* border-radius: 0.25rem; */
   gap: 0;
 }
 
 .card-img {
-  /* box-sizing: border-box; */
   grid-area: card-img;
   overflow: hidden;
 }
@@ -182,24 +182,24 @@
   border: none;
   /* border-radius: 0.25rem; */
   background: var(--red);
-  color: white;
+  color: var(--white);
   font-weight: bold;
   cursor: pointer;
 }
 
 .btn-liked {
   display: flex;
-  justify-content: flex-end;
   align-items: baseline;
+  justify-content: flex-end;
+  margin-right: 1rem;
   padding: 0.1rem 0.125rem;
   border: none;
-  background: white;
+  background: var(--white);
   color: var(--red);
   font-size: 0.8em;
   font-weight: bold;
   cursor: pointer;
   gap: 0.25rem;
-  margin-right: 1rem;
 }
 
 .no-grid {
