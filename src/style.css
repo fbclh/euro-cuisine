@@ -1,3 +1,19 @@
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2caca;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 :root {
   --red: #de1616;
   --light-red: #fce9e9;
@@ -317,22 +333,6 @@ input:focus {
 
 .align-text {
   align-self: center;
-}
-
-::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #e2caca;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--black);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 /*
