@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --env=jsdom",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -19,6 +19,12 @@
   "bugs": {
     "url": "https://github.com/fbclh/js-capstone/issues"
   },
+    "jest": {
+      "resetMocks": false,
+      "setupFiles": [
+        "jest-localstorage-mock"
+    ]
+  },
   "homepage": "https://github.com/fbclh/js-capstone#readme",
   "devDependencies": {
     "css-loader": "^6.7.0",
@@ -32,6 +38,8 @@
   "dependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
-    "babel-jest": "^27.5.1"
+    "babel-jest": "^27.5.1",
+    "jest-localstorage-mock": "^2.4.19",
+    "jsdom": "^19.0.0"
   }
 }

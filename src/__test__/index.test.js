@@ -34,15 +34,15 @@ beforeAll(() => {
   `;
 });
 
-describe('Check counter all item function', () => {
-  test('Should be show Beef (42) ', () => {
-    const beefElement = document.querySelector('li');
-    displayCounter(beefElement, 42);
-    expect(beefElement.textContent).toEqual('Beef (42)');
+describe('Test to verify number of items in French cuisine category.', () => {
+  test('The result should be French (28) ', () => {
+    const frenchElement = document.querySelector('li');
+    displayCounter(frenchElement, 28);
+    expect(frenchElement.textContent).toEqual('French (28)');
   });
 });
 
-describe('Check comments counter function', () => {
+describe('Testing the correct counting of comments', () => {
   test('Title header shows Comments (3)', () => {
     const container = document.querySelector('.container-food-cards');
     container.innerHTML = `<h3>Comments</h3>

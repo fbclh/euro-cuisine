@@ -69,4 +69,4 @@ const getAllData = async (url, categorySelected) => {
   displayData(responseInfo);
 };
 
-export { getAllData as default };
+export { getAllData, displayCounter };
