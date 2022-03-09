@@ -16,7 +16,7 @@ const createPopup = (details, msgDat) => {
   const itemdata = document.createElement('div');
   itemdata.classList.add('form-container');
   const messageContainer = document.createElement('div');
-  messageContainer.id = 'mesgContainer';
+  messageContainer.id = 'msgContainer';
   messageContainer.classList.add('form-container');
   const newMessCont = document.createElement('div');
   newMessCont.classList.add('form-container');
