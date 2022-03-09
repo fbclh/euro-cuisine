@@ -10,15 +10,15 @@
   background: var(--black);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 :root {
   --red: #de1616;
   --light-red: #fce9e9;
   --black: #191919;
-  --white: #ffffff;
+  --white: #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /*
