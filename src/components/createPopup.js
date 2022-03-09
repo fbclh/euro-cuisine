@@ -14,12 +14,12 @@ const createPopup = (details, msgDat) => {
   const myPopup = document.createElement('div');
   const popupButon = document.createElement('button');
   const itemdata = document.createElement('div');
-  itemdata.classList.add('mesgFormContainer');
+  itemdata.classList.add('form-container');
   const messageContainer = document.createElement('div');
   messageContainer.id = 'mesgContainer';
-  messageContainer.classList.add('mesgFormContainer');
+  messageContainer.classList.add('form-container');
   const newMessCont = document.createElement('div');
-  newMessCont.classList.add('mesgFormContainer');
+  newMessCont.classList.add('form-container');
   displaycomments(msgDat, messageContainer);
   newMessageForm(newMessCont, details.idMeal);
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
@@ -28,7 +28,7 @@ const createPopup = (details, msgDat) => {
   myPopup.id = 'myPopup';
   popupButon.innerHTML = 'X';
   popupButon.addEventListener('click', () => closePopup(myPopup));
-  myPopup.classList.add('popuptext');
+  myPopup.classList.add('popup');
   myPopup.classList.toggle('show');
   mainCont.classList.toggle('no-grid');
   myPopup.appendChild(popupButon);

@@ -9,7 +9,7 @@ const displaycomments = (arr, container) => {
   title.innerHTML = 'Comments';
   container.appendChild(title);
   const messageData = document.createElement('div');
-  messageData.classList.add('mesgContent');
+  messageData.classList.add('message-content');
   if (!arr.error) {
     countComment(arr, title);
     arr.forEach((element) => {
@@ -26,7 +26,8 @@ const displaycomments = (arr, container) => {
 };
 
 const getComments = async (id) => {
-  const getMessagesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments?item_id=';
+  const getMessagesLink =
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments?item_id=';
   const request = new Request(getMessagesLink + id);
   const response = await fetch(request);
   const responseJson = await response.json();

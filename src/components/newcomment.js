@@ -33,8 +33,8 @@ const newMessage = (id, user, message) => {
 
 const newMessageForm = (container, itemId) => {
   const formNewMessage = document.createElement('div');
-  formNewMessage.innerHTML = '<h3 class="aligCener">Add a Comment</h3>';
-  formNewMessage.classList.add('mesgContent');
+  formNewMessage.innerHTML = '<h3 class="align-text">Add a Comment</h3>';
+  formNewMessage.classList.add('message-content');
   const userName = document.createElement('input');
   userName.type = 'text';
   userName.name = 'username';
