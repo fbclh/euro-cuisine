@@ -47,6 +47,10 @@
   }
 }
 
+.logo-link,.logo-link:hover,.logo-link:visited{
+  text-decoration: none;
+}
+
 .logo {
   margin: 0;
   padding: 0;

@@ -12,7 +12,7 @@ const closePopup = (elem) => {
 
 const createPopup = (details, msgDat) => {
   const myPopup = document.createElement('div');
-  const popupButon = document.createElement('button');
+  const popupButton = document.createElement('button');
   const itemdata = document.createElement('div');
   itemdata.classList.add('form-container');
   const messageContainer = document.createElement('div');
@@ -26,12 +26,12 @@ const createPopup = (details, msgDat) => {
   <p class="recipe">${details.strInstructions}</p>`;
   itemdata.id = details.idMeal;
   myPopup.id = 'myPopup';
-  popupButon.innerHTML = 'X';
-  popupButon.addEventListener('click', () => closePopup(myPopup));
+  popupButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  popupButton.addEventListener('click', () => closePopup(myPopup));
   myPopup.classList.add('popup');
   myPopup.classList.toggle('show');
   mainCont.classList.toggle('no-grid');
-  myPopup.appendChild(popupButon);
+  myPopup.appendChild(popupButton);
   myPopup.appendChild(itemdata);
   myPopup.appendChild(messageContainer);
   myPopup.appendChild(newMessCont);
