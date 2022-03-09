@@ -28,9 +28,7 @@ Run
    npm install
    npm start
 ```
-
 ## Authors
-
 ### Fabio Coelho
 
 - GitHub: [github.com/fbclh](https://github.com/fbclh)
