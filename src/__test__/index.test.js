@@ -10,7 +10,8 @@ beforeAll(() => {
         <div>
           <a href="/" class="logo-link">
           <h1 class="logo">
-
+          <span class="logo-span-1">Euro</span>
+          <span class="logo-span-2">Cuisine</span>
           </h1>
           </a>
         </div>
@@ -52,7 +53,9 @@ describe('Testing the correct counting of comments', () => {
     <div><span>New comment 4</span></div>
     <div><span>New comment 5</span></div>`;
     const title = document.querySelector('h3');
-    const array = document.querySelectorAll('span');
+        const nodeList = document.querySelectorAll('span');
+        const array = Array.from(nodeList)
+        array.splice(0,2)
 
     countComments(array, title);
 
