@@ -189,6 +189,7 @@
 
 .btn-liked {
   display: flex;
+  justify-content:flex-end;
   align-items: baseline;
   padding: 0.1rem 0.125rem;
   border: none;
@@ -198,6 +199,7 @@
   font-weight: bold;
   cursor: pointer;
   gap: 0.25rem;
+  margin-right: 1rem;
 }
 
 /* .no-grid {
