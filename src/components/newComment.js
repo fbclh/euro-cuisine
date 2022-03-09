@@ -32,9 +32,9 @@ const newMessage = (id, user, message) => {
 };
 
 const newMessageForm = (container, itemId) => {
-  const formNewMessage = document.createElement('div');
-  formNewMessage.innerHTML = '<h3 class="align-text">Add a Comment</h3>';
-  formNewMessage.classList.add('message-content');
+  const newCommentDiv = document.createElement('div');
+  newCommentDiv.innerHTML = '<h3 class="align-text">Add a Comment</h3>';
+  newCommentDiv.classList.add('message-content');
   const userName = document.createElement('input');
   userName.type = 'text';
   userName.name = 'username';
@@ -50,11 +50,11 @@ const newMessageForm = (container, itemId) => {
   button.addEventListener('click', () =>
     newMessage(itemId, userName, textMessage)
   );
-  formNewMessage.appendChild(userName);
-  formNewMessage.appendChild(textMessage);
-  formNewMessage.appendChild(button);
+  newCommentDiv.appendChild(userName);
+  newCommentDiv.appendChild(textMessage);
+  newCommentDiv.appendChild(button);
 
-  container.appendChild(formNewMessage);
+  container.appendChild(newCommentDiv);
 };
 
 export { newMessageForm as default };

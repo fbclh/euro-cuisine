@@ -18,10 +18,10 @@ const createPopup = (details, msgDat) => {
   const messageContainer = document.createElement('div');
   messageContainer.id = 'msgContainer';
   messageContainer.classList.add('form-container');
-  const newMessCont = document.createElement('div');
-  newMessCont.classList.add('form-container');
+  const formContainer = document.createElement('div');
+  formContainer.classList.add('form-container');
   displayComments(msgDat, messageContainer);
-  newMessageForm(newMessCont, details.idMeal);
+  newMessageForm(formContainer, details.idMeal);
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
   <p class="recipe">${details.strInstructions}</p>`;
   itemdata.id = details.idMeal;
@@ -34,7 +34,7 @@ const createPopup = (details, msgDat) => {
   myPopup.appendChild(popupButton);
   myPopup.appendChild(itemdata);
   myPopup.appendChild(messageContainer);
-  myPopup.appendChild(newMessCont);
+  myPopup.appendChild(formContainer);
   mainCont.appendChild(myPopup);
 };
 
