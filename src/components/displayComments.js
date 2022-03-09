@@ -1,9 +1,9 @@
-const countComment = (arr, title) => {
+const countComments = (arr, title) => {
   const counter = ` (${arr.length})`;
   title.innerHTML += counter;
 };
 
-const displaycomments = (arr, container) => {
+const displayComments = (arr, container) => {
   container.innerHTML = '';
   const title = document.createElement('h3');
   title.innerHTML = 'Comments';
@@ -11,7 +11,7 @@ const displaycomments = (arr, container) => {
   const messageData = document.createElement('div');
   messageData.classList.add('message-content');
   if (!arr.error) {
-    countComment(arr, title);
+    countComments(arr, title);
     arr.forEach((element) => {
       const messItem = document.createElement('div');
       messItem.innerHTML = `
@@ -34,4 +34,4 @@ const getComments = async (id) => {
   return responseJson;
 };
 
-export { displaycomments, getComments, countComment };
+export { displayComments, getComments, countComments };

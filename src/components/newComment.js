@@ -1,4 +1,4 @@
-import { displaycomments, getComments } from './displaycomments.js';
+import { displayComments, getComments } from './displayComments.js';
 
 const postNewMessage = async (id, name, text) => {
   const postMessageLink =
@@ -20,7 +20,7 @@ const postNewMessage = async (id, name, text) => {
   await fetch(request, data);
   const arr = await getComments(id);
   const container = document.getElementById('msgContainer');
-  displaycomments(arr, container);
+  displayComments(arr, container);
 };
 
 const newMessage = (id, user, message) => {

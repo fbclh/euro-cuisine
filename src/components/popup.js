@@ -1,6 +1,6 @@
 import hideCSS from './hideCSS.js';
-import { displaycomments, getComments } from './displaycomments.js';
-import newMessageForm from './newcomment.js';
+import { displayComments, getComments } from './displayComments.js';
+import newMessageForm from './newComment.js';
 
 const mainCont = document.querySelector('.food-container');
 
@@ -20,7 +20,7 @@ const createPopup = (details, msgDat) => {
   messageContainer.classList.add('form-container');
   const newMessCont = document.createElement('div');
   newMessCont.classList.add('form-container');
-  displaycomments(msgDat, messageContainer);
+  displayComments(msgDat, messageContainer);
   newMessageForm(newMessCont, details.idMeal);
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
   <p class="recipe">${details.strInstructions}</p>`;
