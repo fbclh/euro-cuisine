@@ -11,36 +11,35 @@ const closePopup = (elem) => {
 };
 
 const createPopup = (details, msgDat) => {
-  const myPopup = document.createElement('div');
+  const dishPopup = document.createElement('div');
   const popupButton = document.createElement('button');
   const itemdata = document.createElement('div');
   itemdata.classList.add('form-container');
   const messageContainer = document.createElement('div');
   messageContainer.id = 'msgContainer';
   messageContainer.classList.add('form-container');
-  const newMessCont = document.createElement('div');
-  newMessCont.classList.add('form-container');
+  const formContainer = document.createElement('div');
+  formContainer.classList.add('form-container');
   displayComments(msgDat, messageContainer);
-  newMessageForm(newMessCont, details.idMeal);
+  newMessageForm(formContainer, details.idMeal);
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
   <p class="recipe">${details.strInstructions}</p>`;
   itemdata.id = details.idMeal;
-  myPopup.id = 'myPopup';
+  dishPopup.id = 'myPopup';
   popupButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-  popupButton.addEventListener('click', () => closePopup(myPopup));
-  myPopup.classList.add('popup');
-  myPopup.classList.toggle('show');
+  popupButton.addEventListener('click', () => closePopup(dishPopup));
+  dishPopup.classList.add('popup');
+  dishPopup.classList.toggle('show');
   mainCont.classList.toggle('no-grid');
-  myPopup.appendChild(popupButton);
-  myPopup.appendChild(itemdata);
-  myPopup.appendChild(messageContainer);
-  myPopup.appendChild(newMessCont);
-  mainCont.appendChild(myPopup);
+  dishPopup.appendChild(popupButton);
+  dishPopup.appendChild(itemdata);
+  dishPopup.appendChild(messageContainer);
+  dishPopup.appendChild(formContainer);
+  mainCont.appendChild(dishPopup);
 };
 
 const getItemData = async (id) => {
-  const foodItemDataURL =
-    'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+  const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
   const request = new Request(foodItemDataURL + id);
   const response = await fetch(request);
   const responseJson = await response.json();

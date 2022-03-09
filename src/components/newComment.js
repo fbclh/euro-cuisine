@@ -1,8 +1,7 @@
 import { displayComments, getComments } from './displayComments.js';
 
 const postNewMessage = async (id, name, text) => {
-  const postMessageLink =
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments';
+  const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xkf1WNltgqyGhjhbknyA/comments';
   const request = new Request(postMessageLink);
   const data = {
     method: 'POST',
@@ -32,9 +31,9 @@ const newMessage = (id, user, message) => {
 };
 
 const newMessageForm = (container, itemId) => {
-  const formNewMessage = document.createElement('div');
-  formNewMessage.innerHTML = '<h3 class="align-text">Add a Comment</h3>';
-  formNewMessage.classList.add('message-content');
+  const newCommentDiv = document.createElement('div');
+  newCommentDiv.innerHTML = '<h3 class="align-text">Add a Comment</h3>';
+  newCommentDiv.classList.add('message-content');
   const userName = document.createElement('input');
   userName.type = 'text';
   userName.name = 'username';
@@ -47,14 +46,12 @@ const newMessageForm = (container, itemId) => {
   const button = document.createElement('input');
   button.type = 'button';
   button.value = 'Comment';
-  button.addEventListener('click', () =>
-    newMessage(itemId, userName, textMessage)
-  );
-  formNewMessage.appendChild(userName);
-  formNewMessage.appendChild(textMessage);
-  formNewMessage.appendChild(button);
+  button.addEventListener('click', () => newMessage(itemId, userName, textMessage));
+  newCommentDiv.appendChild(userName);
+  newCommentDiv.appendChild(textMessage);
+  newCommentDiv.appendChild(button);
 
-  container.appendChild(formNewMessage);
+  container.appendChild(newCommentDiv);
 };
 
 export { newMessageForm as default };
