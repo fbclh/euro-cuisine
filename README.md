@@ -1,12 +1,12 @@
-# JS Capstone
+# Euro Cuisine
 
-The JavaScript capstone project is about building your own web application based on an external API. You will select an API that provides data about a topic that you like and then build the web app around it. The web app will have 2 or 3 user interfaces (depending on the size of your team).
+Euro Cuisine is a vanilla JavaScript project that retrieves data from two different external APIs. The App lists dishes from different European countries when the user interacts with the navbar.
 
-<!-- ![screenshot](image.png) -->
+![screenshot](src/images/euro-cuisine.png)
 
-<!-- ## Live Demo -->
+## Live Demo
 
-<!-- [Live Demo Link](https://hendridg.github.io/capstone-javascript/) -->
+[fbclh.github.io/euro-cuisine/dist](https://fbclh.github.io/euro-cuisine/dist)
 
 ## Built With
 
@@ -15,38 +15,19 @@ The JavaScript capstone project is about building your own web application based
 
 ## Getting Started
 
+Clone
+
+```sh
+   git clone git@github.com:fbclh/euro-cuisine.git
+```
+
 Run
 
 ```sh
-   git clone git@github.com:fbclh/js-capstone.git
-```
-
-<!-- Run
-
-```sh
+   cd euro-cuisine
+   npm install
    npm start
-``` -->
-<!--  -->
-
-<!-- - Run this command in your OS terminal to get a copy of the project:
-
-  ```
-  git@github.com:...
-  ```
-
-- Open the folder project from your code editor.
-
-- Run:
-
-  ```
-  npm install
-  ```
-  
-- From the root folder run start command to see the project on browser: 
-
-  ```
-  npm start
-  ``` -->
+```
 
 ## Authors
 
