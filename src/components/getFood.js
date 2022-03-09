@@ -39,19 +39,17 @@ const displayData = (arr) => {
           : '<i class="far fa-heart"></i> (0)';
     };
     getLikes()
-      .then(printLike)
-      .catch((e) => console.log(e));
-    
+      .then(printLike);
+
     btnRecipeElement.addEventListener('click', () => {
       getItemData(food.idMeal);
       hideCSS();
     });
-    
+
     btnLikedElement.addEventListener('click', () => {
       addLikes(food.idMeal);
       getLikes()
-        .then(printLike)
-        .catch((e) => console.log(e));
+        .then(printLike);
     });
 
     board.appendChild(item);

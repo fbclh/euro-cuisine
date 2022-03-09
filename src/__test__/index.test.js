@@ -44,7 +44,7 @@ describe('Test to verify number of items in French cuisine category.', () => {
 });
 
 describe('Testing the correct counting of comments', () => {
-    test('Result must show Comments (5)', () => {
+  test('Result must show Comments (5)', () => {
     const container = document.querySelector('.food-container');
     container.innerHTML = `<h3>Comments</h3>
     <div><span>New comment 1</span></div>
@@ -53,9 +53,9 @@ describe('Testing the correct counting of comments', () => {
     <div><span>New comment 4</span></div>
     <div><span>New comment 5</span></div>`;
     const title = document.querySelector('h3');
-        const nodeList = document.querySelectorAll('span');
-        const array = Array.from(nodeList)
-        array.splice(0,2)
+    const nodeList = document.querySelectorAll('span');
+    const array = Array.from(nodeList);
+    array.splice(0, 2);
 
     countComments(array, title);
 
