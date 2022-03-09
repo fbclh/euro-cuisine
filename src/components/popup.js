@@ -1,4 +1,4 @@
-import hiddenItems from './hiddenItems.js';
+import hideCSS from './hideCSS.js';
 import { displaycomments, getComments } from './displaycomments.js';
 import newMessageForm from './newcomment.js';
 
@@ -6,7 +6,7 @@ const mainCont = document.querySelector('.food-container');
 
 const closePopup = (elem) => {
   mainCont.classList.toggle('no-grid');
-  hiddenItems();
+  hideCSS();
   mainCont.removeChild(elem);
 };
 

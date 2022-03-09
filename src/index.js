@@ -1,5 +1,5 @@
 import './style.css';
-import getAllData from './components/getDataFood.js';
+import getAllData from './components/getFood.js';
 
 // eslint-disable-next-line operator-linebreak
 const [frenchElement, portugueseElement, italianElement] =
