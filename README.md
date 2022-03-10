@@ -6,7 +6,7 @@ Euro Cuisine is a vanilla JavaScript project that retrieves data from two differ
 
 ## Live Demo
 
-[fbclh.github.io/euro-cuisine/dist](https://fbclh.github.io/euro-cuisine)
+[fbclh.github.io/euro-cuisine](https://fbclh.github.io/euro-cuisine)
 
 ## Built With
 
