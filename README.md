@@ -2,16 +2,15 @@
 
 Euro Cuisine is a vanilla JavaScript project that retrieves data from two different external APIs. The App lists dishes from different European countries when the user interacts with the navbar.
 
-![screenshot](src/images/euro-cuisine.png)
+<!-- ![screenshot](src/images/euro-cuisine.png) -->
 
 ## Live Demo
 
-[fbclh.github.io/euro-cuisine](https://fbclh.github.io/euro-cuisine)
+[euro-cuisine-fbclh.netlify.app/](https://euro-cuisine-fbclh.netlify.app/)
 
 ## Built With
 
-- Languages: HTML, CSS and JS
-- Tools: Webpack, NPM, Jest
+- JS | HTML | CSS | Webpack | Jest
 
 ## Getting Started
 
